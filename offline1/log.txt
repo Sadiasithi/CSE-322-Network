@@ -1,0 +1,1100 @@
+Connection received
+Connection received
+input : GET /client HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:45:16 BDT 2024
+Content-Type: text/html
+Content-Length: 122
+
+<h1>File Server/client</h1><ul><li><a href="/client/1.docx">1.docx</a></li><li><a href="/client/2.png">2.png</a></li></ul>Connection received
+input : GET /client/2.png HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:45:18 BDT 2024
+Content-Type: image/png
+Content-Length: 8923
+
+Connection received
+input : GET / HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:46:39 BDT 2024
+Content-Type: text/html
+Content-Length: 126
+
+<h1>File Server/</h1><ul><li><b><i><a href="root">root</a></i></b></li><li><b><i><a href="client">client</a></i></b></li></ul>Connection received
+input : UPLOAD 1.png
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:47:38 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+input : UPLOAD 2.png
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:47:45 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+Connection received
+input : GET /root/dir1/abc.txt
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:50:09 BDT 2024
+Content-Type: text/plain
+Content-Length: 5
+
+Connection received
+input : UPLOAD sample.mp4
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:52:35 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+Connection received
+input : GET /client HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:52:42 BDT 2024
+Content-Type: text/html
+Content-Length: 172
+
+<h1>File Server/client</h1><ul><li><a href="/client/1.png">1.png</a></li><li><a href="/client/2.png">2.png</a></li><li><a href="/client/sample.mp4">sample.mp4</a></li></ul>input : GET /client/sample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:52:43 BDT 2024
+Content-Type: video/mp4
+Content-Length: 13927646
+
+Connection received
+input : GET /client/sample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:52:43 BDT 2024
+Content-Type: video/mp4
+Content-Length: 13927646
+
+Connection received
+input : UPLOAD sample2.mp4
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:57:57 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+input : GET /client HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:58:12 BDT 2024
+Content-Type: text/html
+Content-Length: 226
+
+<h1>File Server/client</h1><ul><li><a href="/client/1.png">1.png</a></li><li><a href="/client/2.png">2.png</a></li><li><a href="/client/sample.mp4">sample.mp4</a></li><li><a href="/client/sample2.mp4">sample2.mp4</a></li></ul>Connection received
+input : null
+Connection received
+input : GET / HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:59:16 BDT 2024
+Content-Type: text/html
+Content-Length: 126
+
+<h1>File Server/</h1><ul><li><b><i><a href="root">root</a></i></b></li><li><b><i><a href="client">client</a></i></b></li></ul>Connection received
+Connection received
+input : GET /client HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:59:18 BDT 2024
+Content-Type: text/html
+Content-Length: 226
+
+<h1>File Server/client</h1><ul><li><a href="/client/1.png">1.png</a></li><li><a href="/client/2.png">2.png</a></li><li><a href="/client/sample.mp4">sample.mp4</a></li><li><a href="/client/sample2.mp4">sample2.mp4</a></li></ul>Connection received
+input : GET /client/1.png HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:59:21 BDT 2024
+Content-Type: image/png
+Content-Length: 8838
+
+input : GET /client HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:59:27 BDT 2024
+Content-Type: text/html
+Content-Length: 226
+
+<h1>File Server/client</h1><ul><li><a href="/client/1.png">1.png</a></li><li><a href="/client/2.png">2.png</a></li><li><a href="/client/sample.mp4">sample.mp4</a></li><li><a href="/client/sample2.mp4">sample2.mp4</a></li></ul>Connection received
+Connection received
+input : GET /client/sample2.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:59:28 BDT 2024
+Content-Type: video/mp4
+Content-Length: 67427070
+
+input : GET /client/sample2.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 14:59:28 BDT 2024
+Content-Type: video/mp4
+Content-Length: 67427070
+
+Connection received
+input : GET /root HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:00:19 BDT 2024
+Content-Type: text/html
+Content-Length: 138
+
+<h1>File Server/root</h1><ul><li><b><i><a href="/root/dir1">dir1</a></i></b></li><li><b><i><a href="/root/dir2">dir2</a></i></b></li></ul>Connection received
+input : GET / HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:00:24 BDT 2024
+Content-Type: text/html
+Content-Length: 126
+
+<h1>File Server/</h1><ul><li><b><i><a href="root">root</a></i></b></li><li><b><i><a href="client">client</a></i></b></li></ul>Connection received
+Connection received
+input : GET /root HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:00:26 BDT 2024
+Content-Type: text/html
+Content-Length: 138
+
+<h1>File Server/root</h1><ul><li><b><i><a href="/root/dir1">dir1</a></i></b></li><li><b><i><a href="/root/dir2">dir2</a></i></b></li></ul>Connection received
+input : GET /root/dir1 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:00:27 BDT 2024
+Content-Type: text/html
+Content-Length: 141
+
+<h1>File Server/root/dir1</h1><ul><li><a href="/root/dir1/abc.txt">abc.txt</a></li><li><a href="/root/dir1/test.docx">test.docx</a></li></ul>input : GET /root/dir1/abc.txt HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:00:28 BDT 2024
+Content-Type: text/plain
+Content-Length: 5
+
+Connection received
+Connection received
+input : GET /root/dir1/test.docx HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:00:35 BDT 2024
+Content-Type: application/octet-stream
+Content-Length: 9942
+
+Connection received
+input : GET /root/dir2 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:00:37 BDT 2024
+Content-Type: text/html
+Content-Length: 150
+
+<h1>File Server/root/dir2</h1><ul><li><a href="/root/dir2/Introduction to Socket Programming.pdf">Introduction to Socket Programming.pdf</a></li></ul>input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+input : GET / HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:01:06 BDT 2024
+Content-Type: text/html
+Content-Length: 126
+
+<h1>File Server/</h1><ul><li><b><i><a href="root">root</a></i></b></li><li><b><i><a href="client">client</a></i></b></li></ul>Connection received
+input : null
+Connection received
+input : GET /root HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:01:09 BDT 2024
+Content-Type: text/html
+Content-Length: 138
+
+<h1>File Server/root</h1><ul><li><b><i><a href="/root/dir1">dir1</a></i></b></li><li><b><i><a href="/root/dir2">dir2</a></i></b></li></ul>Connection received
+Connection received
+input : GET /root/dir2 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:01:11 BDT 2024
+Content-Type: text/html
+Content-Length: 150
+
+<h1>File Server/root/dir2</h1><ul><li><a href="/root/dir2/Introduction to Socket Programming.pdf">Introduction to Socket Programming.pdf</a></li></ul>Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+input : GET / HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:02:53 BDT 2024
+Content-Type: text/html
+Content-Length: 126
+
+<h1>File Server/</h1><ul><li><b><i><a href="root">root</a></i></b></li><li><b><i><a href="client">client</a></i></b></li></ul>Connection received
+input : GET / HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:02:56 BDT 2024
+Content-Type: text/html
+Content-Length: 126
+
+<h1>File Server/</h1><ul><li><b><i><a href="root">root</a></i></b></li><li><b><i><a href="client">client</a></i></b></li></ul>Connection received
+input : GET /root HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:02:58 BDT 2024
+Content-Type: text/html
+Content-Length: 138
+
+<h1>File Server/root</h1><ul><li><b><i><a href="/root/dir1">dir1</a></i></b></li><li><b><i><a href="/root/dir2">dir2</a></i></b></li></ul>Connection received
+Connection received
+input : GET /root/dir2 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:02:59 BDT 2024
+Content-Type: text/html
+Content-Length: 150
+
+<h1>File Server/root/dir2</h1><ul><li><a href="/root/dir2/Introduction to Socket Programming.pdf">Introduction to Socket Programming.pdf</a></li></ul>Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+input : GET /root/dir2/Introduction%20to%20Socket%20Programming.pdf HTTP/1.1
+Connection received
+input : GET / HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:04:12 BDT 2024
+Content-Type: text/html
+Content-Length: 126
+
+<h1>File Server/</h1><ul><li><b><i><a href="root">root</a></i></b></li><li><b><i><a href="client">client</a></i></b></li></ul>Connection received
+input : GET /root HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:04:17 BDT 2024
+Content-Type: text/html
+Content-Length: 138
+
+<h1>File Server/root</h1><ul><li><b><i><a href="/root/dir1">dir1</a></i></b></li><li><b><i><a href="/root/dir2">dir2</a></i></b></li></ul>Connection received
+Connection received
+input : GET /root/dir2 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:04:18 BDT 2024
+Content-Type: text/html
+Content-Length: 94
+
+<h1>File Server/root/dir2</h1><ul><li><a href="/root/dir2/hello.docx">hello.docx</a></li></ul>Connection received
+input : GET /root HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:04:20 BDT 2024
+Content-Type: text/html
+Content-Length: 138
+
+<h1>File Server/root</h1><ul><li><b><i><a href="/root/dir1">dir1</a></i></b></li><li><b><i><a href="/root/dir2">dir2</a></i></b></li></ul>Connection received
+input : GET /root/dir1 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:04:21 BDT 2024
+Content-Type: text/html
+Content-Length: 141
+
+<h1>File Server/root/dir1</h1><ul><li><a href="/root/dir1/abc.txt">abc.txt</a></li><li><a href="/root/dir1/test.docx">test.docx</a></li></ul>Connection received
+input : GET /root/dir1/test.docx HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:04:23 BDT 2024
+Content-Type: application/octet-stream
+Content-Length: 9942
+
+input : GET /root/dir2/hello.docx HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:04:25 BDT 2024
+Content-Type: application/octet-stream
+Content-Length: 9926
+
+Connection received
+input : UPLOAD sample.mp4
+Connection received
+input : UPLOAD sample2.mp4
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:04:55 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+Connection received
+input : GET / HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:05:32 BDT 2024
+Content-Type: text/html
+Content-Length: 126
+
+<h1>File Server/</h1><ul><li><b><i><a href="root">root</a></i></b></li><li><b><i><a href="client">client</a></i></b></li></ul>Connection received
+input : GET /client HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:05:35 BDT 2024
+Content-Type: text/html
+Content-Length: 142
+
+<h1>File Server/client</h1><ul><li><a href="/client/sample.mp4">sample.mp4</a></li><li><a href="/client/sample2.mp4">sample2.mp4</a></li></ul>Connection received
+Connection received
+input : GET /client/sample2.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:05:37 BDT 2024
+Content-Type: video/mp4
+Content-Length: 46107488
+
+input : GET /client/sample2.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:05:37 BDT 2024
+Content-Type: video/mp4
+Content-Length: 46136288
+
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:06:03 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+input : UPLOAD FallBranch.mp4
+Connection received
+input : GET /client HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:11:11 BDT 2024
+Content-Type: text/html
+Content-Length: 202
+
+<h1>File Server/client</h1><ul><li><a href="/client/FallBranch.mp4">FallBranch.mp4</a></li><li><a href="/client/sample.mp4">sample.mp4</a></li><li><a href="/client/sample2.mp4">sample2.mp4</a></li></ul>Connection received
+Connection received
+input : null
+input : null
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:13:29 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+input : UPLOAD 2.png
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:16:31 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+input : GET /client HTTP/1.1
+Connection received
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:16:41 BDT 2024
+Content-Type: text/html
+Content-Length: 244
+
+<h1>File Server/client</h1><ul><li><a href="/client/2.png">2.png</a></li><li><a href="/client/FallBranch.mp4">FallBranch.mp4</a></li><li><a href="/client/sample.mp4">sample.mp4</a></li><li><a href="/client/sample2.mp4">sample2.mp4</a></li></ul>input : GET /client/2.png HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:16:43 BDT 2024
+Content-Type: image/png
+Content-Length: 8923
+
+Connection received
+Connection received
+Connection received
+input : UPLOAD 2.png
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:16:56 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+input : GET /client HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:17:04 BDT 2024
+Content-Type: text/html
+Content-Length: 244
+
+<h1>File Server/client</h1><ul><li><a href="/client/2.png">2.png</a></li><li><a href="/client/FallBranch.mp4">FallBranch.mp4</a></li><li><a href="/client/sample.mp4">sample.mp4</a></li><li><a href="/client/sample2.mp4">sample2.mp4</a></li></ul>Connection received
+input : GET /client/2.png HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:17:05 BDT 2024
+Content-Type: image/png
+Content-Length: 8923
+
+input : null
+Connection received
+Connection received
+input : GET /root/dir2 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:18:14 BDT 2024
+Content-Type: text/html
+Content-Length: 151
+
+<h1>File Server/root/dir2</h1><ul><li><a href="/root/dir2/hello.docx">hello.docx</a></li><li><a href="/root/dir2/sample3.mp4">sample3.mp4</a></li></ul>Connection received
+input : GET /root/dir2/sample3.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:18:15 BDT 2024
+Content-Type: video/mp4
+Content-Length: 57607809
+
+input : GET /root/dir2/sample3.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:18:15 BDT 2024
+Content-Type: video/mp4
+Content-Length: 57607809
+
+Connection received
+input : GET /root/dir2/hello.docx HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:18:21 BDT 2024
+Content-Type: application/octet-stream
+Content-Length: 9926
+
+Connection received
+input : null
+Connection received
+input : GET /root/dir1 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:19:59 BDT 2024
+Content-Type: text/html
+Content-Length: 141
+
+<h1>File Server/root/dir1</h1><ul><li><a href="/root/dir1/abc.txt">abc.txt</a></li><li><a href="/root/dir1/test.docx">test.docx</a></li></ul>Connection received
+Connection received
+input : GET /root/dir1/test.docx HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:20:02 BDT 2024
+Content-Type: application/octet-stream
+Content-Length: 9942
+
+input : GET /root/dir1/test.docx HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:20:04 BDT 2024
+Content-Type: application/octet-stream
+Content-Length: 9942
+
+Connection received
+Connection received
+input : GET /root/dir1/test.docx HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:21:49 BDT 2024
+Content-Type: application/octet-stream
+Content-Length: 9942
+
+Connection received
+input : GET /root/dir1 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:21:56 BDT 2024
+Content-Type: text/html
+Content-Length: 141
+
+<h1>File Server/root/dir1</h1><ul><li><a href="/root/dir1/abc.txt">abc.txt</a></li><li><a href="/root/dir1/test.docx">test.docx</a></li></ul>Connection received
+input : null
+input : null
+Connection received
+Connection received
+input : GET /root/dir5 HTTP/1.1
+
+Response : 
+HTTP/1.0 404 Not Found
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:56:52 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+input : GET /root/dir2 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:57:30 BDT 2024
+Content-Type: text/html
+Content-Length: 151
+
+<h1>File Server/root/dir2</h1><ul><li><a href="/root/dir2/hello.docx">hello.docx</a></li><li><a href="/root/dir2/sample3.mp4">sample3.mp4</a></li></ul>Connection received
+input : UPLOAD bigsample.mp4
+input : null
+Connection received
+input : GET / HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:58:31 BDT 2024
+Content-Type: text/html
+Content-Length: 126
+
+<h1>File Server/</h1><ul><li><b><i><a href="root">root</a></i></b></li><li><b><i><a href="client">client</a></i></b></li></ul>Connection received
+Connection received
+input : GET /client HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:58:33 BDT 2024
+Content-Type: text/html
+Content-Length: 302
+
+<h1>File Server/client</h1><ul><li><a href="/client/2.png">2.png</a></li><li><a href="/client/bigsample.mp4">bigsample.mp4</a></li><li><a href="/client/FallBranch.mp4">FallBranch.mp4</a></li><li><a href="/client/sample.mp4">sample.mp4</a></li><li><a href="/client/sample2.mp4">sample2.mp4</a></li></ul>input : GET /client/bigsample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:58:54 BDT 2024
+Content-Type: video/mp4
+Content-Length: 35644480
+
+Connection received
+input : GET /client/bigsample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 15:58:54 BDT 2024
+Content-Type: video/mp4
+Content-Length: 35680480
+
+Connection received
+input : GET /client/bigsample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:00:32 BDT 2024
+Content-Type: video/mp4
+Content-Length: 141930176
+
+Connection received
+input : GET /client/bigsample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:00:32 BDT 2024
+Content-Type: video/mp4
+Content-Length: 141959328
+
+Connection received
+input : UPLOAD 1.png
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:00:54 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+input : UPLOAD sample.mp4
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:03:49 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+input : UPLOAD bigsample.mp4
+Connection received
+input : GET /client HTTP/1.1
+Connection received
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:04:38 BDT 2024
+Content-Type: text/html
+Content-Length: 344
+
+<h1>File Server/client</h1><ul><li><a href="/client/1.png">1.png</a></li><li><a href="/client/2.png">2.png</a></li><li><a href="/client/bigsample.mp4">bigsample.mp4</a></li><li><a href="/client/FallBranch.mp4">FallBranch.mp4</a></li><li><a href="/client/sample.mp4">sample.mp4</a></li><li><a href="/client/sample2.mp4">sample2.mp4</a></li></ul>Connection received
+input : null
+Connection received
+input : GET /client/FallBranch.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:08:51 BDT 2024
+Content-Type: video/mp4
+Content-Length: 169132950
+
+Connection received
+input : GET /client/FallBranch.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:08:51 BDT 2024
+Content-Type: video/mp4
+Content-Length: 169132950
+
+Connection received
+input : GET /client/bigsample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:08:56 BDT 2024
+Content-Type: video/mp4
+Content-Length: 323496704
+
+Connection received
+input : GET /client/bigsample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:08:56 BDT 2024
+Content-Type: video/mp4
+Content-Length: 323565120
+
+Connection received
+input : GET /client/bigsample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:09:25 BDT 2024
+Content-Type: video/mp4
+Content-Length: 347863328
+
+Connection received
+input : GET /client/bigsample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:09:25 BDT 2024
+Content-Type: video/mp4
+Content-Length: 347892768
+
+Connection received
+Connection received
+input : GET /client/FallBranch.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:09:28 BDT 2024
+Content-Type: video/mp4
+Content-Length: 169132950
+
+input : GET /client/FallBranch.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:09:28 BDT 2024
+Content-Type: video/mp4
+Content-Length: 169132950
+
+Connection received
+input : GET / HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:11:35 BDT 2024
+Content-Type: text/html
+Content-Length: 126
+
+<h1>File Server/</h1><ul><li><b><i><a href="root">root</a></i></b></li><li><b><i><a href="client">client</a></i></b></li></ul>Connection received
+input : GET / HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:11:41 BDT 2024
+Content-Type: text/html
+Content-Length: 126
+
+<h1>File Server/</h1><ul><li><b><i><a href="root">root</a></i></b></li><li><b><i><a href="client">client</a></i></b></li></ul>Connection received
+input : GET /client HTTP/1.1
+Connection received
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:11:44 BDT 2024
+Content-Type: text/html
+Content-Length: 344
+
+<h1>File Server/client</h1><ul><li><a href="/client/1.png">1.png</a></li><li><a href="/client/2.png">2.png</a></li><li><a href="/client/bigsample.mp4">bigsample.mp4</a></li><li><a href="/client/FallBranch.mp4">FallBranch.mp4</a></li><li><a href="/client/sample.mp4">sample.mp4</a></li><li><a href="/client/sample2.mp4">sample2.mp4</a></li></ul>input : GET /client/1.png HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:11:46 BDT 2024
+Content-Type: image/png
+Content-Length: 8838
+
+Connection received
+Connection received
+input : GET /root HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:11:51 BDT 2024
+Content-Type: text/html
+Content-Length: 138
+
+<h1>File Server/root</h1><ul><li><b><i><a href="/root/dir1">dir1</a></i></b></li><li><b><i><a href="/root/dir2">dir2</a></i></b></li></ul>input : GET /root/dir1 HTTP/1.1
+Connection received
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:11:52 BDT 2024
+Content-Type: text/html
+Content-Length: 141
+
+<h1>File Server/root/dir1</h1><ul><li><a href="/root/dir1/abc.txt">abc.txt</a></li><li><a href="/root/dir1/test.docx">test.docx</a></li></ul>input : GET /root/dir1/abc.txt HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:11:53 BDT 2024
+Content-Type: text/plain
+Content-Length: 5
+
+Connection received
+input : GET /root HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:12:06 BDT 2024
+Content-Type: text/html
+Content-Length: 138
+
+<h1>File Server/root</h1><ul><li><b><i><a href="/root/dir1">dir1</a></i></b></li><li><b><i><a href="/root/dir2">dir2</a></i></b></li></ul>Connection received
+Connection received
+input : GET /root/dir2 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:12:07 BDT 2024
+Content-Type: text/html
+Content-Length: 151
+
+<h1>File Server/root/dir2</h1><ul><li><a href="/root/dir2/hello.docx">hello.docx</a></li><li><a href="/root/dir2/sample3.mp4">sample3.mp4</a></li></ul>input : GET /root/dir2/hello.docx HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:12:09 BDT 2024
+Content-Type: application/octet-stream
+Content-Length: 9926
+
+Connection received
+input : null
+Connection received
+input : GET /root/dir1 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:13:25 BDT 2024
+Content-Type: text/html
+Content-Length: 202
+
+<h1>File Server/root/dir1</h1><ul><li><a href="/root/dir1/abc.txt">abc.txt</a></li><li><a href="/root/dir1/bigsample.mp4">bigsample.mp4</a></li><li><a href="/root/dir1/test.docx">test.docx</a></li></ul>Connection received
+input : GET /root/dir1/bigsample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:13:27 BDT 2024
+Content-Type: video/mp4
+Content-Length: 889407376
+
+Connection received
+input : GET /root/dir1/bigsample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:13:27 BDT 2024
+Content-Type: video/mp4
+Content-Length: 889407376
+
+Connection received
+input : GET /root/dir1/bigsample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:13:32 BDT 2024
+Content-Type: video/mp4
+Content-Length: 889407376
+
+Connection received
+input : GET /root/dir1/bigsample.mp4 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:13:32 BDT 2024
+Content-Type: video/mp4
+Content-Length: 889407376
+
+Connection received
+input : GET /root/dir3 HTTP/1.1
+
+Response : 
+HTTP/1.0 404 Not Found
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:13:55 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+Connection received
+input : GET /root/dir1 HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:14:28 BDT 2024
+Content-Type: text/html
+Content-Length: 202
+
+<h1>File Server/root/dir1</h1><ul><li><a href="/root/dir1/abc.txt">abc.txt</a></li><li><a href="/root/dir1/bigsample.mp4">bigsample.mp4</a></li><li><a href="/root/dir1/test.docx">test.docx</a></li></ul>Connection received
+input : GET /root/dir1/abc.txt HTTP/1.1
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:14:34 BDT 2024
+Content-Type: text/plain
+Content-Length: 5
+
+input : GET /root/dir1/ambkgkjg HTTP/1.1
+
+Response : 
+HTTP/1.0 404 Not Found
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:14:41 BDT 2024
+Content-Type: 
+Content-Length: 0
+
+Connection received
+Connection received
+input : null
+input : null
+Connection received
+input : UPLOAD bigsample2.mp4
+Connection received
+input : UPLOAD bigsample1.mp4
+Connection received
+Connection received
+input : UPLOAD sample.mp4
+
+Response : 
+HTTP/1.0 200 OK
+Server: Java HTTP Server: 1.0
+Date: Sat Sep 14 16:22:17 BDT 2024
+Content-Type: 
+Content-Length: 0
+

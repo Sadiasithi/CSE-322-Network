@@ -1,0 +1,314 @@
+Router
+   CPU
+   RAM   //Running-config
+   ROM
+   NV-RAM  Startup-Config(keeping backup in NV-Ram)
+   Flash=> IOS(Inter-networking Os)
+
+ Putty -> pc + switch connect with console(the blue wire) -> go to Pc terminal and then ok , now we will get the switch's command prompt from the pc end, not from the switch...
+___________________________________________________________________
+
+Basics
+___________________________________________________________________
+User mode Router>
+privileged mode Router#
+
+Switch> enable -> user mode to privilege mode
+switch# disable -> does the opposite
+
+config t -> configure terminal
+
+
+ctrl + z -> hash mode , then exit to user mode
+
+1. to change switch name -> hostname sw-Floor-1
+2.to set password ->
+    line console 0
+    password cisco(cisco is the pass)
+    login
+
+this password will be needed for entering 
+
+3.to set password before entering the # mode->
+   enable secret class(class is the pass)
+
+
+4.to on router telnet(telnet??->  remote login)
+  line vty 0 15
+  password cisco
+  login
+   
+5.show run -> show running -config{before config t}
+  show startup-config(at first not present)
+6. copy run start-> copy in NV-Ram
+   now present
+
+show ip route
+___________________________________________________________________
+
+
+
+VLAN
+___________________________________________________________________
+1.VLAN declaration: first job is to declare all the vlans in all the switches that are needed..
+   vlan 10
+   name CSE
+   vlan 30 
+   name ME
+
+show vlan brief to check if created properly
+
+
+2.port assignment for VLAN // if symmetric then we can give these commands to all switches, but if port different , then we have to write for them as well
+      int f0/1
+      switchport mode access
+      switchport access vlan 10
+
+      int f0/2
+      switchport mode access
+      switchport access vlan 30
+
+3.now enable trunk mode in all the switches we need
+      int g0/1
+      switchport mode trunk
+      switchport trunk native vlan 1
+      switchport trunk allowed vlan 10,30,1 // the list
+
+native->advantage->no tagging
+non-native->vlan tagging
+
+sh flash -> vlan creation data,vlan.dat
+if our vlan is wrong , then  command -> 
+           delete flash:vlan.dat or delete vlan.dat
+                           _________________
+   
+
+4.Inter VLAN routing : 
+need a router, all access mode, no trunk mode
+   issue-> onek beshi vlan hole , per vlan we will need one physical router interface, not feasible 
+
+we will have to do one to many-> router on a stick, there will be a trunk connection between switch and router
+
+
+G0/0->
+   g0/0.10
+   g0/0.30 hoye jabe ekhon as one to many -> sub interface
+
+5.Inter-VLAN configuration:
+    int g0/0.10 // interface
+    encap dot1q 10 // encapsulation
+    ip address 172.17.10.1 255.255.255.0//give the default gateway address
+
+    int g0/0.30
+    encap dot1q 30 
+    ip address 172.17.30.1 255.255.255.0
+    
+    interface g0/0
+    no shutdown // go to main interface and no shutdown(up)
+_____________________________________________________________________________
+
+
+
+NAT
+______________________________________________________________________________
+
+show ip interface brief -> to check
+
+configure router:
+1.//for R1:
+    int g0/0
+    ip address 192.168.10.1 255.255.255.0
+    no shutdown
+
+    int g0/1
+    ip address 192.168.20.1 255.255.255.0
+    no shutdown
+
+    //for the serial port, clock rate should be added.
+    int s0/0/0
+    ip address 100.2.2.1 255.255.255.252
+    clock rate 64000 
+    no shutdown
+
+2.//for R2:
+     //for the serial port, no clock rate add
+     int s0/0/0
+     ip address 100.2.2.2 255.255.255.252
+     no shutdown
+
+     //for connecting the switch 
+     int g0/0
+     ip address 100.10.10.1 255.255.255.0
+     no shutdown
+
+
+3.static routing---------------(1 to 1 mapping)
+   //NAT Router(R1)
+   ip route 0.0.0.0 0.0.0.0 s0/0/0
+   //(R2)
+   ip route 0.0.0.0 0.0.0.0 s0/0/0
+
+4.Dynamic routing-----
+inside outside chenate hobe
+   for R1:
+       int g0/0
+       ip nat inside
+       int g0/1
+       ip nat inside
+       int s0/0/0
+       ip nat outside
+
+Now we want ://pool
+ CSE LAN -- NAT translation allow
+ ME LAN -- also allow
+
+ //for R1   
+   ip nat pool BUETpool 209.175.200.5   209.175.200.10 netmask 255.255.255.224
+   access-list 1 permit 192.168.10.0   0.0.0.255
+   access-list 1 permit 192.168.20.0   0.0.0.255
+   ip nat inside source list 1 pool BUETpool 
+     
+
+pc1-> desktop->web browser-> we can give the url of web server and see the details
+
+    
+    **show running-config | include ip nat  
+   ** show ip nat translations 
+   ** clear ip nat translation *
+
+   show ip nat statistics
+   clear ip nat statistics
+
+// transport layer port no
+HTTP - 80
+FTP - 21
+
+
+5.PAT:
+    ip nat inside source list 1 pool BUETpool overload (//overload -> pat)
+    209.165.8.1400
+    209.165.8.1401
+    209.165.8.1402
+    209.165.8.1403
+
+___________________________________________________________________
+
+
+
+ACL
+___________________________________________________________________
+=> ACL rules:
+allow FTP from 192.168.10.10 
+Deny all others
+
+Allow CSE LAN to browse Web server
+Block ME LAN to browse Web server
+
+Router
+per interface
+G0/0 => inbound, outbound, IPv4 + IPv6 = 4 ACL
+
+wildcard mask -> opposite of subnet mask
+
+
+1.standard ACL:1-99=> src Address
+------------------------------------------------------------------
+placement: closest to the destination
+
+===========numbered ACL==========
+  ip access-list 10 permit 192.168.10.10  0.0.0.0 //there is no freedom, all octet 32 bit have to be matched.
+
+  ip access-list 10 permit 192.168.10.0  0.0.0.15 //(10.1-10.15)
+  ip access-list 10 permit 192.168.10.64  0.0.0.15//(64 to 79)
+                       0100 xxxx(64-79)
+ 
+
+ip access-list 10 permit 192.168.10.0  0.0.0.15                     
+ip access-list 10 deny any (default)
+
+
+//host 192.168.10.10 or 192.168.10.10 0.0.0.0 same
+
+
+=========NAMED ACL=========
+define:
+ip access-list standard permit-access
+permit host 192.168.10.2
+deny 192.168.10.0   0.0.0.255 (10 network er 2 bade baki sob deny)
+permit 192.168.20.0   0.0.0.255
+
+apply:
+int s0/0/0 // for both 10 & 20
+ip access-group permit-access out
+
+show access-lists:
+remark -> comment
+
+
+
+kono jiniske atkate hobe age , thats why extended ACL
+2.Extended ACL:(100-199) src IP,Dest Ip,port
+-------------------------------------------------------------------
+placement: closest to source
+
+web server -> permit tcp
+ftp server -> permit ftp
+configure:
+   ip access-list extended FILTER-CSE
+   permit tcp 192.168.10.0   0.0.0.255 host 100.10.10.2 eq www
+   deny tcp 192.168.10.0   0.0.0.255 host 100.10.10.3 eq ftp
+   permit ip any any
+
+   int g0/0
+   ip access-group FILTER-CSE in
+
+   ip access-list extended FILTER-ME
+   permit tcp 192.168.20.0   0.0.0.255 host 100.10.10.3 eq ftp
+   deny tcp 192.168.20.0   0.0.0.255 host 100.10.10.2 eq www
+   permit ip any any
+
+   int g0/1
+   ip access-group FILTER-ME in
+
+
+  ftp 100.10.10.3
+  web browser: 100.10.10.2
+
+
+  no ip access-list extended FILTER-ME => del kore dibe 
+
+
+//out example
+int s0/0/0
+ip access-group FILTER out
+
+
+//ACL example denying pc to pc
+access-list 100 deny ip 192.168.1.10 0.0.0.0 192.168.2.20 0.0.0.0
+access-list 100 permit ip any any
+
+interface GigabitEthernet0/0
+ip access-group 100 in
+
+
+
+===================================================================
+VLAN brief:
+1.enter configuration mode->en, conf t
+2.create VLANs -> vlan and names
+3.assign ports to VLANs ->int f0/1, switchport mode access, switchport access vlan 10
+4.configure trunk ports-> int g0/1, switchport mode trunk, native & allowed VLAN
+
+if Inter-VLAN :  Router on a stick, then
+only the connection between final switch and the router will be trunk.so for that switch we have to configure (int f0/5, switchport mode trunk)
+5.configure router with sub interfaces-> int g0/0.20,encap dot1Q 10, ip address (default gateway) (subnet mask)
+6.then go to g0/0 and no shutdown
+
+7.for verify
+show vlan brief
+show interfaces switchport
+show-running config
+
+=> configure trunk for every switch that are connected
+
+interface range fa0/1 - 3 => for range 
